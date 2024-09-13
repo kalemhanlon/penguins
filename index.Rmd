@@ -9,3 +9,18 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, print = FALSE}
+library(tidyverse)
+library(knitr)
+library(palmerpenguins)
+library(ggplot2)
+```
+
+##  Data
+
+Both datasets contain data for 344 penguins. There are 3 different species of penguins in this dataset, collected from 3 islands in the Palmer Archipelago, Antarctica.
+
+##  Single trait distribution  
+###  Bill length differences
+The bill length is significantly different between species of penguins
+
