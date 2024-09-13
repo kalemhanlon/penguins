@@ -1,0 +1,11 @@
+name: "Penguins"
+navbar:
+  title: "Our Collaborative Website"
+  left:
+    - text: "Cars"
+      href: index.html
+    - text: "single trait"
+      href: Single_trait
+    - text: "multi trait"
+      href: multi_trait.html
+output_dir: "."
