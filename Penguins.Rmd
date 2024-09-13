@@ -1,0 +1,48 @@
+---
+title: "Penguins"
+author: "kalem hanlon"
+date: "2024-09-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, print = FALSE}
+library(tidyverse)
+library(knitr)
+library(palmerpenguins)
+library(ggplot2)
+```
+
+##  Data
+
+Both datasets contain data for 344 penguins. There are 3 different species of penguins in this dataset, collected from 3 islands in the Palmer Archipelago, Antarctica.
+
+##  Single trait distribution  
+###  Bill length differences
+The bill length is significantly different between species of penguins
+
+```{r}
+ggplot(data = penguins) +
+  geom_boxplot(mapping = aes(x = species, y = bill_length_mm, color = species))
+```
+
+
+##  Relationship between multiple traits
+
+The relationship between bill length and flipper length is interesting
+```{r}
+ggplot(data = penguins) +
+  geom_point(mapping = aes(x = flipper_length_mm, y = bill_length_mm, color = species))
+```
+
+##  Sexual Dimorphism
+
+The size of the bills varies by sex and by species
+```{r}
+ggplot(data = penguins) +
+  geom_boxplot(mapping = aes(x = species, y = bill_length_mm, color = sex))
+```
+
